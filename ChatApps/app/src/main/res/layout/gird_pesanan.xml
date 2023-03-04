@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parentLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints">
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity = "center"
+            android:layout_margin="5dp"
+            app:cardCornerRadius="@dimen/_6sdp"
+            app:cardElevation="@dimen/_2sdp"
+            tools:ignore="MissingConstraints">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="5dp"
+                android:orientation="horizontal"
+                android:layout_margin="@dimen/_6sdp">
+                <ImageView
+                    android:id="@+id/ic_pesanan"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/facebook"
+                    />
+                <LinearLayout
+                    android:layout_weight="2"
+                    android:layout_marginLeft="5dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                <TextView
+                    android:id="@+id/produk_ps"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Nama Produk"
+                    android:textSize="@dimen/_10sdp"
+                    android:fontFamily="@font/poppinssemibold"
+                    android:textColor="#000000"/>
+
+
+                <TextView
+                    android:id="@+id/status_ps"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Order"
+                    android:textColor="#E91E63"
+                    android:textSize="@dimen/_10sdp"
+                    android:fontFamily="@font/poppinsregular"/>
+                <TextView
+                    android:id="@+id/tgl_ps"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="28 Januari 2023"
+                    android:textSize="@dimen/_10sdp"
+                    android:fontFamily="@font/poppinsregular"/>
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_weight="4"
+                    android:layout_marginLeft="5dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/harga_ps"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rp345.000"
+                        android:layout_gravity="right"
+                        android:textSize="@dimen/_10sdp"
+                        android:fontFamily="@font/poppinssemibold"
+                        android:textColor="#000000"/>
+
+
+                    <TextView
+                        android:id="@+id/status_pm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:text="Berhasil"
+                        android:layout_gravity="right"
+                        android:textColor="@color/white"
+                        android:background="@drawable/button_shape"
+                        android:backgroundTint="#4CAF50"
+                        android:textSize="@dimen/_10sdp"
+                        android:fontFamily="@font/poppinsregular"/>
+
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

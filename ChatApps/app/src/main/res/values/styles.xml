@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<!--    Base aplication theme-->
+    <style name="ChatApps" parent="Theme.MaterialComponents.Light.DarkActionBar">
+<!--        customise theme here -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/white</item>
+        <item name="colorAccent">@color/colorDivider</item>
+
+
+
+    </style>
+
+</resources>

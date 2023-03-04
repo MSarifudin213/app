@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".MainActivity">
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="@id/viewhaderback"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/viewhaderback"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="@+id/tabLayout">
+
+        <TextView
+            android:id="@+id/text_nama"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_48sdp"
+            android:layout_marginLeft="@dimen/_16sdp"
+            android:layout_marginTop="0dp"
+            android:text="@string/sarifudin"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_10sdp"
+            android:fontFamily="@font/poppinsmedium"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/button_profile" />
+
+        <TextView
+            android:visibility="invisible"
+            android:id="@+id/text_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_48sdp"
+            android:layout_marginLeft="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:text="mobile@mobile.com"
+            android:textColor="@color/white"
+            android:fontFamily="@font/poppinsmedium"
+            android:textSize="@dimen/_10sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/text_nama" />
+
+        <TextView
+            android:visibility="invisible"
+            android:id="@+id/text_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_48sdp"
+            android:layout_marginLeft="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:text="password"
+            android:textColor="@color/white"
+            android:fontFamily="@font/poppinsmedium"
+            android:textSize="@dimen/_10sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/text_nama" />
+
+        <Button
+            android:id="@+id/button_notif"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:layout_marginRight="@dimen/_16sdp"
+            app:backgroundTint = "@color/white"
+            android:background="@drawable/notification_bell"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/button_profile" />
+        <Button
+            android:id="@+id/button_pesan"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="@dimen/_48sdp"
+            android:layout_marginRight="@dimen/_16sdp"
+            app:backgroundTint = "@color/white"
+            android:background="@drawable/chat"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/button_notif" />
+
+
+        <Button
+            android:id="@+id/button_profile"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_16sdp"
+            app:backgroundTint = "@color/white"
+            android:background="@drawable/menu"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#00FFFFFF"
+        android:layout_marginTop="@dimen/_48sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:backgroundTint = "@color/white"
+        app:tabBackground="@android:color/transparent"
+        app:tabIndicator="@android:drawable/screen_background_dark_transparent"
+        app:tabIndicatorHeight="3dp"
+        app:tabMode="fixed"
+        app:tabTextColor="@color/white"
+        app:tabIndicatorColor="@color/white"
+        app:tabPaddingBottom="8dp"
+        app:tabPaddingTop="15dp" >
+<!--        -->
+<!--        <com.google.android.material.tabs.TabItem-->
+<!--            android:id="@+id/tab_pesanan"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Pesanan">-->
+<!--        </com.google.android.material.tabs.TabItem>-->
+<!--        <com.google.android.material.tabs.TabItem-->
+<!--            android:id="@+id/tab_home"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Home">-->
+<!--        </com.google.android.material.tabs.TabItem>-->
+<!--        <com.google.android.material.tabs.TabItem-->
+<!--            android:id="@+id/tab_extra"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Extra">-->
+<!--        </com.google.android.material.tabs.TabItem>-->
+
+
+
+
+
+    </com.google.android.material.tabs.TabLayout>
+
+
+
+    <!--        app:layout_constraintTop_toBottomOf="@id/tabLayout"-->
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

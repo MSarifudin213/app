@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".PesananFragment">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <View
+        android:id="@+id/backp"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/back_pesanan"
+        tools:ignore="MissingConstraints">
+    </View>
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardpesanan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:background="@color/card_background"
+        app:cardCornerRadius="@dimen/_16sdp"
+        app:cardElevation="4dp"
+        app:layout_constraintBottom_toBottomOf="@id/backp"
+        app:layout_constraintTop_toBottomOf="@id/backp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_100sdp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_weight="2"
+                android:scaleType="fitCenter"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/pesnan">
+
+            </ImageView>
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_marginRight="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Pesanan Dikerjakan Profesional "
+                    android:textColor="#262D5D"
+                    android:fontFamily="@font/poppinssemibold"/>
+                <TextView
+                    android:layout_marginRight="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Pesanan akan dikerjakan oleh sesuai ahlinya masing - masing"
+                    android:fontFamily="@font/poppinsregular"
+                    android:textSize="@dimen/_7sdp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:id="@+id/daftar_pesanan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Daftar Pesanan"
+        android:textColor="#000000"
+        android:layout_marginTop="@dimen/_14sdp"
+        android:fontFamily="@font/poppinssemibold"
+        android:textSize="@dimen/_12sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        app:layout_constraintTop_toBottomOf="@id/cardpesanan"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyler_pesanan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_14sdp"
+        app:cardCornerRadius="@dimen/_16sdp"
+        app:layout_constraintTop_toBottomOf="@id/daftar_pesanan"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
+
